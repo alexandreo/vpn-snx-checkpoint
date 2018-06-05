@@ -19,21 +19,21 @@ expect {
                                       send "$password\r"
                                       expect {
                                               "Do you accept" {
-                                                               send_user "Accepting certificate\n"
-                                                               send "y\r"
-                                                               exp_continue
+                                                   send_user "Accepting certificate\n"
+                                                   send "y\r"
+                                                   exp_continue
                                               }
                                               "connected." {
-                                                            send_user "Connected!\n"
-                                                            exit 0
+                                                    send_user "Connected!\n"
+                                                    exit 0
                                               }
                                               "Connection aborted." {
-                                                             send_user "Connection aborted.\n"
-                                                             exit 0
+                                                    send_user "Connection aborted.\n"
+                                                    exit 0
                                               }
                                               "Authentication failed" {
-                                                           send_user "Auth failed.\n"
-                                                           exit 0
+                                                   send_user "Auth failed.\n"
+                                                   exit 0
                                               }
                                               eof {
                                                    send_user "Error!\n"
@@ -50,8 +50,8 @@ expect {
                            exit 0
                       }
                       timeout {
-                               send_user "Timeout!\n"
-                               exit 0
+                            send_user "Timeout!\n"
+                            exit 0
                       }
               }
        }
