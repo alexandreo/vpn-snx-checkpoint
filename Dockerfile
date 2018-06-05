@@ -8,8 +8,6 @@ RUN cd /root && bash -x snx_install.sh
 ADD scripts/snx.sh /root
 RUN chmod +x /root/snx.sh
 
-ADD scripts/danted.conf /etc/danted.conf
-
 EXPOSE 1080
 
 CMD ["/root/snx.sh"]
